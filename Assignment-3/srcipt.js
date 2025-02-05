@@ -132,3 +132,17 @@ function reverseString(str) {
 let str2 = "Hello";
 console.log(reverseString(str2));
 
+console.log("Question 11");
+const students1 = {
+    student1: { subject1: 44, subject2: 56, subject3: 87, subject4: 97, subject5: 37 },
+    student2: { subject1: 44, subject2: 56, subject3: 87, subject4: 97, subject5: 37 },
+    student3: { subject1: 44, subject2: 56, subject3: 87, subject4: 97, subject5: 37 }
+};
+
+const output2 = Object.entries(students1).map(([student, subjects]) => {
+    const scores = Object.values(subjects); // Extract subject scores
+    const average = Math.floor(scores.reduce((sum, score) => sum + score, 0) / scores.length);
+    return { [student]: { average } }; // Return the required format
+});
+
+console.log(output2);
