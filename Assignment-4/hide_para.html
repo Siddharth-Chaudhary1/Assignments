@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hide Show Paragraph Assignment</title>
+</head>
+<body>
+    <button id="toggle-para">Hide/Show Paragraph</button>
+    <p id="paragraph">This is a paragraph that will be toggled.</p>
+
+    <script>
+        document.getElementById('toggle-para').addEventListener('click', function () {
+            let para = document.getElementById('paragraph');
+            if (para.style.display === 'none') {
+                para.style.display = 'block';
+            } else {
+                para.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
